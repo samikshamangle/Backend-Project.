@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimony Website</title>
+</head>
+<body>
+    <%- include('nav')%>
+    <h2 class="text-center fw-bold mt-4">Candidates!</h2>
+
+    <div class="box-1"></div>
+    <% if(users && users.length > 0) { %>
+    <table class="table w=50 m-5 text-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Qualification</th>
+      <th scope="col">Image</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+<% users.forEach((row, index) => { %>
+
+    <tr>
+      <td><%=row.name%></td>
+      <td><%=row.phone%></td>
+      <td><%=row.email%></td>
+      <td><%=row.quali%></td>
+      <td><img src="<%=row.image%>" alt="User Image" width="80"/>
+      </td>
+      <td><a href="/delete/<%=row.id%>" class="btn btn-danger">delete</a>
+      </td>
+       <td><a href="/edit/<%=row.id%>" class="btn btn-primary">update</a>
+      </td>
+    </tr>
+    </tr>
+ 
+    <% }) %>
+  </tbody>
+</table>
+<% } else { %>
+<p>No users found!</p>
+<% } %>
+    <%- include('footer')%>
+</body>
+</html>

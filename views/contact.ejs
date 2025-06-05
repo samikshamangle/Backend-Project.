@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimony Website</title>
+</head>
+<body>
+    <%- include('nav')%>
+    <div class="container my-5" style="font-family: 'Poppins', sans-serif;">
+  <div class="row align-items-center bg-light rounded shadow p-4">
+    
+    <!-- Left: Contact Information -->
+    <div class="col-md-6 mb-4 mb-md-0">
+      <h3 class="fw-bold mb-3">Connect with Us</h3>
+      <p class="mb-2"><i class="bi bi-geo-alt-fill me-2 text-danger"></i>123 Wedding Lane, Kharadi, Pune, Maharashtra</p>
+      <p class="mb-2"><i class="bi bi-telephone-fill me-2 text-danger"></i>+91 98765 43210</p>
+      <p class="mb-2"><i class="bi bi-envelope-fill me-2 text-danger"></i>support@globalmatrimony.com</p>
+      <p><i class="bi bi-clock-fill me-2 text-danger"></i>Mon - Sat: 9:00 AM to 7:00 PM</p>
+      <a href="mailto:support@globalmatrimony.com" class="btn btn-danger mt-3">Send Us a Message</a>
+    </div>
+
+    <!-- Right: Embedded Map -->
+    <div class="col-md-6">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30259.781134136785!2d73.94599495!3d18.5527185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c3288ba495%3A0x38e833613a63004a!2sKharadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1746173323208!5m2!1sen!2sin" 
+        width="100%" 
+        height="250" 
+        style="border:0; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</div>
+
+    <%- include('footer')%>
+</body>
+</html>

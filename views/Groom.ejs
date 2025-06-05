@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matrimony Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #fff0f5; /* Light pink background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .main-heading {
+      text-align: center;
+      color: text-info;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <%- include('nav') %>
+
+  <!-- Main Heading -->
+  <h2 class="main-heading">Fill  Groom's Data!</h2>
+
+  <!-- Form Section -->
+  <div class="container w-50 mt-4">
+    <div class="form-container">
+      <div class="alert alert-secondary text-center" role="alert">
+        Register Here!
+      </div>
+
+      <form method="post" action="/adduser" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label class="form-label">Enter Name</label>
+          <input type="text" class="form-control" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Enter Phone Number</label>
+          <input type="text" class="form-control" name="phone" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Enter Qualification</label>
+          <input type="text" class="form-control" name="quali" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Upload Your Image</label>
+          <input type="file" class="form-control" name="image" required>
+        </div>
+        <button type="submit" class="btn btn-danger w-100">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <%- include('footer') %>
+
+</body>
+</html>
