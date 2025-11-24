@@ -1,5 +1,5 @@
 const express=require('express')
-require('dotenv').config();
+require("dotenv").config();
 const mongoose=require("mongoose")
 const multer=require("multer")
 const session=require("express-session")
@@ -21,10 +21,13 @@ path.get("/sign",controlfile.sig)
 //signup
 
 //database connection
-mongoose.connect('mongodb://localhost:27017/weddingdata',{useNewURLParser:true})
-const db=mongoose.connection
-db.on('error',(error)=>console.log(error))
-db.once('open',()=>console.log("connected to database"))
+
+mongoose.connect(process.env.DB_URL)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.log("MongoDB Error:", error));
+
+
+
 
 //fetch data from database
 path.get("/cand",(req,res)=>{
